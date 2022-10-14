@@ -45,7 +45,7 @@ router.get('/', async (req, res) => {
 
 
 //get one post by id
-router.get('/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       attributes: [
