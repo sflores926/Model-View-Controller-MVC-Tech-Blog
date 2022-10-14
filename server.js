@@ -16,7 +16,10 @@ const hbs = exphbs.create({ helpers });
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    // maxAge sets the maximum age for the session to be active. Listed in milliseconds. This session wil end after 10 mins.
+    maxAge: 600
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
