@@ -1,6 +1,6 @@
 //used my project2 as reference for this challenge 
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, User, Comments } = require('../../models');
 const withAuth = require('../utils/auth');
 
 
@@ -22,6 +22,7 @@ router.get("/", async (req, res) => {
 router.post("/", withAuth, async (req, res) => {
     try {
         const postData = await Post.create({
+            ...req.body,
             title: req.body.title,
             content: req.body.content,
             user_id: req.session.user_id,
