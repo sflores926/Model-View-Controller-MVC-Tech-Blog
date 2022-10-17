@@ -1,7 +1,7 @@
 //used my project2 as reference for this challenge and MVC mini-project-28
 const router = require('express').Router();
 const { Post, User, Comments } = require('../../models');
-const withAuth = require('../utils/auth');
+const withAuth = require('../../utils/auth');
 
 
 // Get a post
