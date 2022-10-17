@@ -42,4 +42,45 @@ router.get('/',withAuth, async (req, res) => {
     }
   });
 
+  router.get('/edit/:id', withAuth, async (req, res) => {
+      try{
+     const postData = Post.findByPk({
+        where:{
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'title',
+            'content',
+            'date_created'
+        ],
+        include: [
+            {
+              model: Comments,
+              attributes: ['id', 'comment', 'post_id', 'user_id', 'date_created'],
+              include: {
+                model: User,
+                attributes: ['name']
+              }
+            },
+            {
+              model: User,
+              attributes: ['name']
+            }
+          ],
+    
+      });
+            // Serialize data so the template can read it
+            const posts = postData.get({ plain: true });
+  
+            // Pass serialized data and session flag into template
+            res.render('editPost', {
+              posts,
+              logged_in: req.session.logged_in
+            });
+          } catch (err) {
+            res.status(500).json(err);
+    }
+});
+
 module.exports = router;
