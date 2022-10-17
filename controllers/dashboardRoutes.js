@@ -10,7 +10,7 @@ router.get('/',withAuth, async (req, res) => {
         attributes: [
           'id',
           'title',
-          'content',
+          'description',
           'date_created'
         ],
         include: [
@@ -51,7 +51,7 @@ router.get('/',withAuth, async (req, res) => {
         attributes: [
             'id',
             'title',
-            'content',
+            'description',
             'date_created'
         ],
         include: [

@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
       attributes: [
         'id',
         'title',
-        'content',
+        'description',
         'date_created'
       ],
       include: [
@@ -51,7 +51,7 @@ router.get('/post/:id', async (req, res) => {
       attributes: [
         'id',
         'title',
-        'content',
+        'description',
         'date_created'
       ],
       include: [

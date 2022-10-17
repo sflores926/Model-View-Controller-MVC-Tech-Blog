@@ -1,27 +1,27 @@
 [
     {
         "title": "Protecting User Data",
-        "content": "Recently researchers found a component in modern computers that might make it easier for hackers to make a side-channel attack.",
+        "description": "Recently researchers found a component in modern computers that might make it easier for hackers to make a side-channel attack.",
         "user_id": 1
     },
     {
         "title": "Quantum Computing",
-        "content": "A team of physicists have started demonstrating how an algorithm can help be implemented so that errors do not spoil results",
+        "description": "A team of physicists have started demonstrating how an algorithm can help be implemented so that errors do not spoil results",
         "user_id": 1
     },
     {
         "title": "Smelling in VR might become possible",
-        "content": "An olfactometer might make it possible to smell in a vr enviroment.",
+        "description": "An olfactometer might make it possible to smell in a vr enviroment.",
         "user_id": 2
     },
     {
         "title": "Black holes",
-        "content": "A black hole is burping up stellar remains.",
+        "description": "A black hole is burping up stellar remains.",
         "user_id": 3
     },
     {
         "title": "Asteroid",
-        "content": "DART mission changed an asteroids route.",
+        "description": "DART mission changed an asteroids route.",
         "user_id": 3
     }
 ]
