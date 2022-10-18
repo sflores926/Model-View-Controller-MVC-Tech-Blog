@@ -49,6 +49,12 @@ document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
 
+  // document.querySelector('#signUp').addEventListener('click', function(){
+  //   window.location = '/signup';
+  // })
+  
+
+
 // document
 //   .querySelector('.signup-form')
 //   .addEventListener('submit', signupFormHandler);
